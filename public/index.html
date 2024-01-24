@@ -15,5 +15,13 @@
     <p><span>GET /api/users</span> - Returns all users from the database</p>
     <p><span>GET /api/users/{}user_id</span> Get user by ID from the database</p>
     <p><span>POST /api/users</span> {JSON object that includes username, email, and passowrd} - Add new user to the database</p>
+
+    <script>
+        fetch('/api/users')
+            .then((res) => {res.json();})
+            .then(data => {
+                console.log(data);
+            })
+    </script>
 </body>
 </html>
