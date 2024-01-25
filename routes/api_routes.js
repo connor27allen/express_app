@@ -7,7 +7,7 @@ const db = require('../db/connection');
 router.get('/users', async (requestObj, responseObj) => {
   //Make a query to the db and get all rows from the users table
   try {
-    const [users] = await db.query('SELECT * FROM users', (err, users));
+    const [users] = await db.query('SELECT * FROM users');
     responseObj.json(users);
   } catch (err) {
     console.log(err);
