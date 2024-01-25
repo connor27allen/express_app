@@ -12,4 +12,4 @@ const connection = mysql.createConnection({
     database: process.env.DB_DATABASE_NAME
   });
 
-  module.exports = connection;
+  module.exports = connection.promise();
